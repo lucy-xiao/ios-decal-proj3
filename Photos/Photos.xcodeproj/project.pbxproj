@@ -15,6 +15,8 @@
 		3A1683A31BE9B717009F39C5 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1683A21BE9B717009F39C5 /* Utils.swift */; };
 		3A1683A71BE9C593009F39C5 /* InstagramAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1683A61BE9C593009F39C5 /* InstagramAPI.swift */; };
 		3A1683A91BE9C5A7009F39C5 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1683A81BE9C5A7009F39C5 /* Photo.swift */; };
+		9C0EF3371BF97EAB0009DE90 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0EF3361BF97EAB0009DE90 /* PhotoCell.swift */; settings = {ASSET_TAGS = (); }; };
+		9C0EF3391BF987E40009DE90 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0EF3381BF987E40009DE90 /* PhotoViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		3A1683A21BE9B717009F39C5 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		3A1683A61BE9C593009F39C5 /* InstagramAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramAPI.swift; sourceTree = "<group>"; };
 		3A1683A81BE9C5A7009F39C5 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		9C0EF3361BF97EAB0009DE90 /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoCell.swift; path = ../PhotoCell.swift; sourceTree = "<group>"; };
+		9C0EF3381BF987E40009DE90 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,8 @@
 				3A1683A11BE9B70C009F39C5 /* Utils */,
 				3A16838F1BE9B642009F39C5 /* AppDelegate.swift */,
 				3A1683931BE9B642009F39C5 /* Main.storyboard */,
+				9C0EF3381BF987E40009DE90 /* PhotoViewController.swift */,
+				9C0EF3361BF97EAB0009DE90 /* PhotoCell.swift */,
 				3A1683961BE9B642009F39C5 /* Assets.xcassets */,
 				3A1683981BE9B642009F39C5 /* LaunchScreen.storyboard */,
 				3A16839B1BE9B642009F39C5 /* Info.plist */,
@@ -171,6 +177,8 @@
 				3A1683921BE9B642009F39C5 /* PhotosCollectionViewController.swift in Sources */,
 				3A1683901BE9B642009F39C5 /* AppDelegate.swift in Sources */,
 				3A1683A31BE9B717009F39C5 /* Utils.swift in Sources */,
+				9C0EF3371BF97EAB0009DE90 /* PhotoCell.swift in Sources */,
+				9C0EF3391BF987E40009DE90 /* PhotoViewController.swift in Sources */,
 				3A1683A71BE9C593009F39C5 /* InstagramAPI.swift in Sources */,
 				3A1683A91BE9C5A7009F39C5 /* Photo.swift in Sources */,
 			);
@@ -284,6 +292,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Photos/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "iOS-DeCal.Photos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -295,6 +304,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Photos/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "iOS-DeCal.Photos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
