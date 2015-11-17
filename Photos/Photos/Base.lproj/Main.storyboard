@@ -75,16 +75,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uzG-yW-n6t">
+                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uzG-yW-n6t">
                                 <rect key="frame" x="145" y="469" width="125" height="21"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ai4-uH-qBz">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ai4-uH-qBz">
                                         <rect key="frame" x="0.0" y="0.0" width="79" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6G-ci-zsZ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6G-ci-zsZ">
                                         <rect key="frame" x="89" y="0.0" width="36" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -92,10 +92,10 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c3X-Uw-hxa">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c3X-Uw-hxa">
                                 <rect key="frame" x="32" y="64" width="350" height="350"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ItT-ih-mEc">
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ItT-ih-mEc">
                                 <rect key="frame" x="149" y="508" width="116" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="####" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mML-QY-8qb">
@@ -125,11 +125,10 @@
                             <constraint firstItem="c3X-Uw-hxa" firstAttribute="centerX" secondItem="oVY-O7-xKA" secondAttribute="centerX" id="3fq-oh-Eah"/>
                             <constraint firstItem="c3X-Uw-hxa" firstAttribute="top" secondItem="paz-uu-w5N" secondAttribute="bottom" id="F1B-pd-JrI"/>
                             <constraint firstItem="uzG-yW-n6t" firstAttribute="centerX" secondItem="oVY-O7-xKA" secondAttribute="centerX" id="Mcz-H2-Fx4"/>
+                            <constraint firstItem="PE4-Z1-kem" firstAttribute="top" secondItem="uzG-yW-n6t" secondAttribute="bottom" constant="237" id="SmG-F9-HKc"/>
                             <constraint firstItem="c3X-Uw-hxa" firstAttribute="top" secondItem="paz-uu-w5N" secondAttribute="bottom" id="geS-7x-GcT"/>
                             <constraint firstItem="uzG-yW-n6t" firstAttribute="top" secondItem="c3X-Uw-hxa" secondAttribute="bottom" constant="55" id="hjv-9G-zpa"/>
                             <constraint firstItem="c3X-Uw-hxa" firstAttribute="leading" secondItem="oVY-O7-xKA" secondAttribute="leadingMargin" constant="12" id="k4n-sc-ov8"/>
-                            <constraint firstItem="ItT-ih-mEc" firstAttribute="centerX" secondItem="oVY-O7-xKA" secondAttribute="centerX" id="pg4-6N-Ajf"/>
-                            <constraint firstItem="ItT-ih-mEc" firstAttribute="top" secondItem="uzG-yW-n6t" secondAttribute="bottom" constant="18" id="xaq-R6-ubX"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
