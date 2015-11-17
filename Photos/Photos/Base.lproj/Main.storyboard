@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Y7T-pb-fZ2">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Photos-->
+        <!--Popular Posts-->
         <scene sceneID="9RV-Xv-bMo">
             <objects>
                 <collectionViewController id="fac-uJ-h8i" customClass="PhotosCollectionViewController" customModule="Photos" customModuleProvider="target" sceneMemberID="viewController">
@@ -54,8 +53,11 @@
                             <outlet property="delegate" destination="fac-uJ-h8i" id="wB8-oW-A9z"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Photos" id="hel-yj-xJk"/>
+                    <navigationItem key="navigationItem" title="Popular Posts" id="hel-yj-xJk"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="collectionViewMain" destination="5Hy-Oy-kbj" id="D9C-Xf-Jpv"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CP4-AF-Afv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -69,53 +71,65 @@
                         <viewControllerLayoutGuide type="top" id="paz-uu-w5N"/>
                         <viewControllerLayoutGuide type="bottom" id="PE4-Z1-kem"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="oVY-O7-xKA" customClass="PhotoCell" customModule="Photos" customModuleProvider="target">
+                    <view key="view" userInteractionEnabled="NO" contentMode="scaleToFill" id="oVY-O7-xKA" customClass="PhotoCell" customModule="Photos" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" misplaced="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uzG-yW-n6t">
-                                <rect key="frame" x="114" y="469" width="180" height="30"/>
+                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uzG-yW-n6t">
+                                <rect key="frame" x="145" y="469" width="125" height="21"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ai4-uH-qBz">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ai4-uH-qBz">
+                                        <rect key="frame" x="0.0" y="0.0" width="79" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6G-ci-zsZ">
+                                        <rect key="frame" x="89" y="0.0" width="36" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c3X-Uw-hxa">
+                                <rect key="frame" x="32" y="64" width="350" height="350"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ItT-ih-mEc">
+                                <rect key="frame" x="149" y="508" width="116" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="####" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mML-QY-8qb">
                                         <rect key="frame" x="0.0" y="0.0" width="42" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6G-ci-zsZ">
-                                        <rect key="frame" x="52" y="0.0" width="36" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text=" Likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQv-ct-Bxh">
+                                        <rect key="frame" x="42" y="0.0" width="44" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mML-QY-8qb">
-                                        <rect key="frame" x="98" y="0.0" width="42" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZfW-mO-qUX">
-                                        <rect key="frame" x="150" y="0.0" width="30" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZfW-mO-qUX">
+                                        <rect key="frame" x="86" y="0.0" width="30" height="30"/>
                                         <state key="normal" title=" ❤️"/>
                                         <connections>
-                                            <action selector="clickLiked" destination="9bP-nQ-VDU" eventType="touchUpInside" id="db3-7g-UI4"/>
+                                            <action selector="clickLiked:" destination="9bP-nQ-VDU" eventType="touchUpInside" id="lhr-J9-jtR"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c3X-Uw-hxa">
-                                <rect key="frame" x="32" y="64" width="350" height="350"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="c3X-Uw-hxa" firstAttribute="centerX" secondItem="oVY-O7-xKA" secondAttribute="centerX" id="3fq-oh-Eah"/>
                             <constraint firstItem="c3X-Uw-hxa" firstAttribute="top" secondItem="paz-uu-w5N" secondAttribute="bottom" id="F1B-pd-JrI"/>
                             <constraint firstItem="uzG-yW-n6t" firstAttribute="centerX" secondItem="oVY-O7-xKA" secondAttribute="centerX" id="Mcz-H2-Fx4"/>
-                            <constraint firstItem="PE4-Z1-kem" firstAttribute="top" secondItem="uzG-yW-n6t" secondAttribute="bottom" constant="237" id="SmG-F9-HKc"/>
                             <constraint firstItem="c3X-Uw-hxa" firstAttribute="top" secondItem="paz-uu-w5N" secondAttribute="bottom" id="geS-7x-GcT"/>
                             <constraint firstItem="uzG-yW-n6t" firstAttribute="top" secondItem="c3X-Uw-hxa" secondAttribute="bottom" constant="55" id="hjv-9G-zpa"/>
                             <constraint firstItem="c3X-Uw-hxa" firstAttribute="leading" secondItem="oVY-O7-xKA" secondAttribute="leadingMargin" constant="12" id="k4n-sc-ov8"/>
+                            <constraint firstItem="ItT-ih-mEc" firstAttribute="centerX" secondItem="oVY-O7-xKA" secondAttribute="centerX" id="pg4-6N-Ajf"/>
+                            <constraint firstItem="ItT-ih-mEc" firstAttribute="top" secondItem="uzG-yW-n6t" secondAttribute="bottom" constant="18" id="xaq-R6-ubX"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">

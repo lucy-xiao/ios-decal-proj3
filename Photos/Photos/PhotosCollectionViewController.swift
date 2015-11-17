@@ -11,12 +11,15 @@ import UIKit
 class PhotosCollectionViewController: UICollectionViewController {
     var photos: [Photo] = []
     
+    @IBOutlet var collectionViewMain: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
         let api = InstagramAPI()
         api.loadPhotos(didLoadPhotos)
         // FILL ME IN
         self.collectionView!.reloadData()
+        
+        collectionViewMain.contentInset = UIEdgeInsetsMake(48, 10, 10, 30)
         
     }
 

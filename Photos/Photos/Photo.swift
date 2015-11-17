@@ -15,6 +15,8 @@ class Photo {
     var url : String!
     /* The username of the photographer. */
     var username : String!
+    
+    var date : NSTimeInterval!
 
     /* Parses a NSDictionary and creates a photo object. */
     init (data: NSDictionary) {
@@ -23,6 +25,8 @@ class Photo {
         username = data.valueForKey("user")?.valueForKey("username") as! String
         url = data.valueForKey("images")!.valueForKey("standard_resolution")?.valueForKey("url") as! String
         likes = data.valueForKey("likes")?.valueForKey("count") as! Int
+        let temp = data.valueForKey("created_time") as! String
+        date = NSTimeInterval(temp)
     }
 
 }

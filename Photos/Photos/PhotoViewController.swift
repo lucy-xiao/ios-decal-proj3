@@ -21,10 +21,15 @@ class PhotoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         self.username.text = photo.username
         self.numLikes.text = String(photo.likes)
         loadImageForCell(photo, imageView: imageDisplay)
-        
+        self.likedButton.addTarget(self, action: "clickLiked", forControlEvents: .TouchUpInside)
+        let date = NSDate(timeIntervalSince1970: photo.date)
+        self.datePosted.text = date.description.substringWithRange(Range<String.Index>(start: date.description.startIndex.advancedBy(0), end: date.description.endIndex.advancedBy(-15))) //"llo, playgroun"
+
+        print(date)
 
     }
     func resizeImage(image: UIImage) -> UIImage {
@@ -48,14 +53,16 @@ class PhotoViewController: UIViewController {
             let image: UIImage = UIImage(data: data!)!
             imageView.image = self.resizeImage(image)
         })
+        
     }
     
-    @IBAction func clickLiked() {
+    @IBAction func clickLiked(sender: UIButton!) {
         print("clickLiked")
         if self.clicked {
             self.likedButton.setTitle("❤️", forState: UIControlState.Normal)
             self.clicked = false
             print("clickLiked.clicked inside true = ", self.clicked)
+            
         } else {
             self.likedButton.setTitle("💖", forState: UIControlState.Normal)
             self.photo.likes! += 1
@@ -63,6 +70,7 @@ class PhotoViewController: UIViewController {
             self.clicked = true
             print("clickLiked.clicked inside false = ", self.clicked)
         }
-        
+        self.view.reloadInputViews()
     }
+    
 }
